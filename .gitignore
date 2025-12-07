@@ -1,0 +1,6 @@
+# Visual Studio Kram, nicht comitten
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
