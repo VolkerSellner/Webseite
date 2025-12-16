@@ -165,6 +165,82 @@ hr.light-100 {
     color: #777;
 }
 
+/* Ausbildungen */
+.education-section {
+    background: #ffffff;
+    padding: 3rem 2rem;
+}
+
+.education-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+.education-intro {
+    max-width: 100%;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.education-item {
+    padding: 1.5rem 0;
+    border-top: 1px solid #e6e6e6;
+}
+
+    .education-item:first-of-type {
+        border-top: none;
+    }
+
+/*.education-logo {
+    border: 1px solid #ccc;
+    background: #fafafa;
+    min-height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    color: #666;
+    font-weight: 500;
+}*/
+
+.education-dates {
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.education-school {
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.education-subline {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.education-focus-title {
+    font-weight: 700;
+    margin-top: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.education-list {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+    .education-list li {
+        margin-bottom: 0.3rem;
+    }
+
+.education-logo-img {
+    max-width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+}
+
 
 /*---Media Queries --*/
 @media (max-width: 1500px){
