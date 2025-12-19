@@ -240,6 +240,70 @@ hr.light-100 {
     max-height: 100px;
     object-fit: contain;
 }
+/* Berufserfahrung */
+.experience-section {
+    background: #ffffff;
+    padding: 3rem 2rem;
+}
+
+.experience-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+.experience-intro {
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.experience-item {
+    padding: 1.5rem 0;
+    border-top: 1px solid #e6e6e6;
+}
+
+    .experience-item:first-of-type {
+        border-top: none;
+    }
+
+/*.experience-image {
+    border: 1px solid #ccc;
+    background: #fafafa;
+    min-height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    color: #666;
+    font-weight: 500;
+}*/
+
+.experience-image-img {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+
+.experience-dates {
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.experience-role {
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.experience-list {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+    .experience-list li {
+        margin-bottom: 0.4rem;
+    }
 
 
 /*---Media Queries --*/
