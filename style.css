@@ -354,6 +354,36 @@ hr.light-100 {
 .hobbies-gallery {
     margin-top: 0.5rem;
 }
+/* Kontakt */
+.contact-section {
+    background: #ffffff;
+    padding: 3rem 2rem;
+}
+
+.contact-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.contact-intro {
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form {
+    max-width: 900px;
+}
+
+.contact-actions {
+    margin-top: 1rem;
+}
+
+.contact-note {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #666;
+}
 
 
 /*---Media Queries --*/
