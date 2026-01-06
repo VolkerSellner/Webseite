@@ -331,20 +331,14 @@
 					Schreib mir gerne eine Nachricht – ich melde mich so rasch wie möglich zurück.
 				</p>
 
-				<!-- FormSubmit: ersetzt DEINE-EMAIL durch deine echte Adresse -->
-				<form class="contact-form" action="https://formsubmit.co/sellner.volker@gmail.com" method="POST">
+				<!-- Netlify Form -->
+				<form class="contact-form"
+					  name="kontakt"
+					  method="POST"
+					  data-netlify="true">
 
-					<!-- Optional: Betreff der E-Mail -->
-					<input type="hidden" name="_subject" value="Neue Nachricht über das Kontaktformular">
-
-					<!-- Optional: Danke-Seite nach Absenden (hier einfach zurück zur Seite) -->
-					<input type="hidden" name="_next" value="https://volkersellner.github.io/Webseite/">
-
-					<!-- Optional: Spam-Schutz (Honeypot) -->
-					<input type="text" name="_honey" style="display:none">
-
-					<!-- Optional: Captcha ein/aus -->
-					<input type="hidden" name="_captcha" value="false">
+					<!-- WICHTIG für Netlify -->
+					<input type="hidden" name="form-name" value="kontakt">
 
 					<div class="form-row">
 						<div class="form-group col-md-6">
@@ -369,7 +363,9 @@
 					</div>
 
 					<div class="contact-actions">
-						<button type="submit" class="btn btn-primary btn-lg">Nachricht senden</button>
+						<button type="submit" class="btn btn-primary btn-lg">
+							Nachricht senden
+						</button>
 					</div>
 
 					<p class="contact-note">
@@ -379,6 +375,7 @@
 			</div>
 		</div>
 	</div>
+
 
 	<!-- Footer -->
 	<footer>
@@ -396,7 +393,7 @@
 					<p>
 						<strong>Betreiber dieser Website</strong><br>
 						Volker Sellner<br>
-						Schönbrunner Schlossstraße 23/18<br>
+						Schönbrunner Schlossstraße 23<br>
 						1120 Wien<br>
 						Österreich
 					</p>
