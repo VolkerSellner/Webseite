@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px; /* damit der Sticky-Header nichts überdeckt */
+}
+
 html, body{
   height: 100%;
   width: 100%;

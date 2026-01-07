@@ -25,19 +25,19 @@
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Ausbildung</a>
+						<a class="nav-link" href="#ausbildung">Ausbildung</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Berufserfahrung</a>
+						<a class="nav-link" href="#berufserfahrung">Berufserfahrung</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Ziele</a>
+						<a class="nav-link" href="#ziele">Ziele</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Interessen</a>
+						<a class="nav-link" href="#interessen">Interessen</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Kontakt</a>
+						<a class="nav-link" href="#kontakt">Kontakt</a>
 					</li>
 				</ul>
 			</div>
@@ -46,7 +46,7 @@
 
 	<!--- Image Slider -->
 	<!-- Ziele / Was ich will -->
-	<div class="container-fluid goals-section" data-aos="fade-up"
+	<div class="container-fluid goals-section" id="ziele" data-aos="fade-up"
 		 data-aos-offset="200"
 		 data-aos-delay="50"
 		 data-aos-duration="1000">
@@ -98,7 +98,7 @@
 	</div>
 
 	<!-- Ausbildungen -->
-	<div class="container-fluid education-section" data-aos="fade-up"
+	<div class="container-fluid education-section" id="ausbildung" data-aos="fade-up"
 		 data-aos-offset="200"
 		 data-aos-delay="50"
 		 data-aos-duration="1000">
@@ -178,7 +178,7 @@
 
 
 	<!-- Berufserfahrung -->
-	<div class="container-fluid experience-section" data-aos="fade-up"
+	<div class="container-fluid experience-section" id="berufserfahrung" data-aos="fade-up"
 		 data-aos-offset="200"
 		 data-aos-delay="50"
 		 data-aos-duration="1000">
@@ -259,7 +259,7 @@
 	</div>
 
 	<!-- Interessen / Hobbies -->
-	<div class="container-fluid hobbies-section" data-aos="fade-up"
+	<div class="container-fluid hobbies-section" id="interessen" data-aos="fade-up"
 		 data-aos-offset="200"
 		 data-aos-delay="50"
 		 data-aos-duration="1000">
@@ -424,6 +424,16 @@
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script>
 		AOS.init();
+	</script>
+	<script>
+		document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+			link.addEventListener('click', () => {
+				const nav = document.getElementById('navbarResponsive');
+				if (nav && nav.classList.contains('show')) {
+					$('.navbar-toggler').click();
+				}
+			});
+		});
 	</script>
 
 </body>
