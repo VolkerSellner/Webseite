@@ -10,7 +10,7 @@ html, body {
     width: 100%;
     font-family: 'Poppins', sans-serif;
     color: #222;
-    padding-top: 64px; /* exakt Navbar-Höhe */
+    padding-top: 34px; /* exakt Navbar-Höhe */
 }
 .navbar{
   padding: .8rem;
