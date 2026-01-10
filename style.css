@@ -165,14 +165,7 @@ hr.light-100 {
     padding: 0;
     border: none;
 }
-    /* Ziele – Foto anpassen */
-    .goals-image img {
-        max-width: 85%; /* Bild kleiner machen */
-        border: none; /* keinen Rahmen */
-        border-radius: 16px; /* abgerundete Ecken */
-        display: block;
-        margin: 0 auto; /* horizontal zentrieren */
-    }
+
 
 
 /* Ausbildungen */
@@ -394,7 +387,14 @@ hr.light-100 {
     font-size: 0.95rem;
     color: #666;
 }
-
+/* Ziele – Foto anpassen */
+.goals-image img {
+    max-width: 85%; /* Bild kleiner machen */
+    border: none; /* keinen Rahmen */
+    border-radius: 16px; /* abgerundete Ecken */
+    display: block;
+    margin: 0 auto; /* horizontal zentrieren */
+}
 
 /*---Media Queries --*/
 @media (max-width: 1500px){
