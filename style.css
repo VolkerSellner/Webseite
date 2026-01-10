@@ -161,7 +161,19 @@ hr.light-100 {
     align-items: center;
     font-size: 1.5rem;
     color: #777;
+    background: none;
+    padding: 0;
+    border: none;
 }
+    /* Ziele – Foto anpassen */
+    .goals-image img {
+        max-width: 85%; /* Bild kleiner machen */
+        border: none; /* keinen Rahmen */
+        border-radius: 16px; /* abgerundete Ecken */
+        display: block;
+        margin: 0 auto; /* horizontal zentrieren */
+    }
+
 
 /* Ausbildungen */
 .education-section {
