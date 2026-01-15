@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+Ôªø@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 90px; /* damit der Sticky-Header nichts ¸berdeckt */
+    scroll-padding-top: 90px; /* damit der Sticky-Header nichts √ºberdeckt */
 }
 
 html, body {
@@ -10,7 +10,7 @@ html, body {
     width: 100%;
     font-family: 'Poppins', sans-serif;
     color: #222;
-    padding-top: 34px; /* exakt Navbar-Hˆhe */
+    padding-top: 28px; /* exakt Navbar-H√∂he */
 }
 .navbar{
   padding: .8rem;
@@ -141,21 +141,21 @@ hr.light-100 {
   width: 150px;
   height: 60px;
 }
-/* Ziele / Was ich will ñ Layout */
+/* Ziele / Was ich will ‚Äì Layout */
 .goals-section {
     background-color: #f5f5f5;
     padding: 3rem 2rem;
 }
 
-/* Bild: links anlegen, rund, nicht zu groﬂ */
+/* Bild: links anlegen, rund, nicht zu gro√ü */
 .goals-image {
     display: flex;
-    justify-content: flex-start; /* Bild links, damit rechts nicht ìleerî wirkt */
+    justify-content: flex-start; /* Bild links, damit rechts nicht ‚Äúleer‚Äù wirkt */
     align-items: center;
 }
 
     .goals-image img {
-        width: 70%; /* Grˆﬂe wie du es willst (z.B. 55ñ75%) */
+        width: 70%; /* Gr√∂√üe wie du es willst (z.B. 55‚Äì75%) */
         height: auto;
         border-radius: 22px; /* runde Ecken */
         display: block;
@@ -389,6 +389,27 @@ hr.light-100 {
     margin-top: 1rem;
     font-size: 0.95rem;
     color: #666;
+}
+
+/* Feinjustierung pro Abschnitt */
+#ziele {
+    scroll-margin-top: 50px;
+}
+
+#ausbildung {
+    scroll-margin-top: -50px;
+}
+/* <- hier drehen */
+#berufserfahrung {
+    scroll-margin-top: 50px;
+}
+
+#interessen {
+    scroll-margin-top: 50px;
+}
+
+#kontakt {
+    scroll-margin-top: 50px;
 }
 
 
