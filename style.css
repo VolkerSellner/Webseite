@@ -2,7 +2,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 90px; /* damit der Sticky-Header nichts überdeckt */
+    /*scroll-padding-top: 90px; damit der Sticky-Header nichts überdeckt */
 }
 
 html, body {
@@ -391,7 +391,7 @@ hr.light-100 {
     color: #666;
 }
 
-/* Feinjustierung pro Abschnitt */
+/* Feinjustierung pro Abschnitt 
 #ziele {
     scroll-margin-top: 50px;
 }
@@ -399,7 +399,6 @@ hr.light-100 {
 #ausbildung {
     scroll-margin-top: -50px;
 }
-/* <- hier drehen */
 #berufserfahrung {
     scroll-margin-top: 50px;
 }
@@ -411,7 +410,7 @@ hr.light-100 {
 #kontakt {
     scroll-margin-top: 50px;
 }
-
+*/
 
 /*---Media Queries --*/
 @media (max-width: 1500px){

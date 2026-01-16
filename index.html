@@ -25,19 +25,19 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item ">
-                        <a class="nav-link" href="#ziele">Ziele</a>
+                        <a class="nav-link" href="#" data-target="#ziele">Ziele</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="#ausbildung">Ausbildung</a>
+                        <a class="nav-link" href="#" data-target="#ausbildung">Ausbildung</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#berufserfahrung">Berufserfahrung</a>
+                        <a class="nav-link" href="#" data-target="#berufserfahrung">Berufserfahrung</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#interessen">Interessen</a>
+                        <a class="nav-link" href="#" data-target="#interessen">Interessen</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#kontakt">Kontakt</a>
+                        <a class="nav-link" href="#" data-target="#kontakt">Kontakt</a>
                     </li>
                 </ul>
             </div>
@@ -429,15 +429,64 @@
         AOS.init();
     </script>
     <script>
+        const NAV_OFFSET = 80; // Navbar-Höhe + kleiner Abstand
+
+        // Liefert die echte Dokument-Position (unabhängig von CSS transform / AOS)
+        function getDocumentTop(el) {
+            let top = 0;
+            while (el) {
+                top += el.offsetTop || 0;
+                el = el.offsetParent;
+            }
+            return top;
+        }
+
+        function doScroll(targetSelector) {
+            const section = document.querySelector(targetSelector);
+            if (!section) return;
+
+            const heading = section.querySelector('h1, h2, h3') || section;
+
+            const y = getDocumentTop(heading) - NAV_OFFSET;
+
+            window.scrollTo({ top: y, behavior: 'smooth' });
+
+            // kleine Nachkorrektur nach AOS-Animation (optional, aber hilft)
+            setTimeout(() => {
+                const y2 = getDocumentTop(heading) - NAV_OFFSET;
+                window.scrollTo({ top: y2, behavior: 'auto' });
+            }, 350);
+        }
+
         document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-            link.addEventListener('click', () => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                const targetSelector = link.dataset.target;
+                if (!targetSelector) return;
+
                 const nav = document.getElementById('navbarResponsive');
+
+                // Wenn Mobile-Menü offen: erst schließen, dann scrollen
                 if (nav && nav.classList.contains('show')) {
+                    $('#navbarResponsive').one('hidden.bs.collapse', function () {
+                        setTimeout(() => doScroll(targetSelector), 50);
+                    });
                     $('.navbar-toggler').click();
+                } else {
+                    doScroll(targetSelector);
                 }
             });
         });
     </script>
+
+
+
+
+
+
+
+
 
 
 </body>
