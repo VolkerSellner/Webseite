@@ -316,6 +316,13 @@ hr.light-100 {
     max-height: 200px;
     object-fit: contain;
 }
+/* Berufserfahrung: Illustration horizontal mittig */
+.experience-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 .experience-dates {
@@ -603,7 +610,57 @@ p {
     padding: 1rem;
 }
 
+/* Über mich: auf Mobile Inhalt im Viewport zentrieren */
+@media (max-width: 576px) {
 
+    /* Section soll mindestens Bildschirmhöhe haben (besser als 100vh am Handy) */
+    #ziele {
+        min-height: calc(100svh - 80px); /* 80px = Navbar */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 1.5rem; /* weniger als 3rem */
+        padding-bottom: 1.5rem;
+    }
+
+        /* Überschrift-Row nicht zu viel Abstand geben */
+        #ziele .education-title {
+            margin-bottom: 0.8rem;
+        }
+
+        /* Bildspalte: zentrieren */
+        #ziele .goals-col-img {
+            display: flex;
+            justify-content: center;
+        }
+
+        #ziele .goals-image {
+            justify-content: center; /* überschreibt flex-start */
+        }
+
+            #ziele .goals-image img {
+                width: 75%;
+                max-width: 320px; /* damit es nicht riesig wird */
+            }
+}
+
+
+/* Überschriften auf Mobile mittig */
+@media (max-width: 576px) {
+
+    .education-title,
+    .experience-title,
+    .hobbies-title,
+    .contact-title,
+    .skills-section .education-title {
+        text-align: center;
+    }
+
+    /* auch Unterüberschriften wie Hard Skills / Soft Skills */
+    .skills-subtitle {
+        text-align: center;
+    }
+}
 
 
 
