@@ -248,6 +248,30 @@ hr.light-100 {
     max-height: 100px;
     object-fit: contain;
 }
+/* Zertifikate – Bildbox genauso wie Berufserfahrung */
+.certificates-image {
+    background: none;
+    border: none;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    min-height: 140px; /* kannst du auch kleiner machen, z. B. 120px */
+}
+
+.certificates-image-img {
+    max-width: 100%;
+    max-height: 135px;
+    object-fit: contain;
+    display: block;
+}
+/* Zertifikate: Text etwas nach unten versetzen */
+.certificates-item .col-md-9 {
+    padding-top: 2rem; /* ggf. 0.4–1.0rem feinjustieren */
+}
+
+
 /* Berufserfahrung */
 .experience-section {
     background: #ffffff;
