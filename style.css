@@ -460,53 +460,53 @@ p {
     margin-bottom: 1rem;
 }
 
+/* Kompetenzen: Text + Dots näher zusammen (wie im Foto) */
 .skill-row {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 220px auto; /* Textspalte fix, Dots daneben */
+    column-gap: 18px;
     align-items: center;
     margin-bottom: 0.6rem;
 }
+
+/* auf kleineren Screens flexibel */
+@media (max-width: 576px) {
+    .skill-row {
+        grid-template-columns: 1fr auto;
+    }
+}
+
 
     .skill-row span {
         font-weight: 500;
     }
 
+/* Skill Dots – alle Kreise identisch */
 .skill-dots {
-    display: flex;
-    gap: 6px;
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
 }
 
-    .skill-dots::before {
-        content: '';
+    /* einzelner Kreis */
+    .skill-dots span {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 2px solid #111;
+        background: transparent;
+        box-sizing: border-box;
     }
 
-    /* 5 Punkte */
-    .skill-dots::after {
-        content: '● ● ● ● ●';
-        letter-spacing: 2px;
-        color: #ccc;
+    /* aktive Kreise */
+    .skill-dots[data-level="1"] span:nth-child(-n+1),
+    .skill-dots[data-level="2"] span:nth-child(-n+2),
+    .skill-dots[data-level="3"] span:nth-child(-n+3),
+    .skill-dots[data-level="4"] span:nth-child(-n+4),
+    .skill-dots[data-level="5"] span:nth-child(-n+5) {
+        background: #111;
     }
 
-    /* Aktive Punkte einfärben */
-    .skill-dots[data-level="1"]::after {
-        color: #666;
-    }
-
-    .skill-dots[data-level="2"]::after {
-        color: #777;
-    }
-
-    .skill-dots[data-level="3"]::after {
-        color: #888;
-    }
-
-    .skill-dots[data-level="4"]::after {
-        color: #444;
-    }
-
-    .skill-dots[data-level="5"]::after {
-        color: #000;
-    }
 
 /*---Media Queries --*/
 @media (max-width: 1500px){
