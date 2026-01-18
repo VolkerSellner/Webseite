@@ -10,7 +10,8 @@ html, body {
     width: 100%;
     font-family: 'Poppins', sans-serif;
     color: #222;
-    padding-top: 28px; /* exakt Navbar-Höhe */
+    padding-top: 28px; /* exakt Navbar-Höhe */    
+
 }
 .navbar{
   padding: .8rem;
@@ -146,6 +147,7 @@ hr.light-100 {
     background-color: #f5f5f5;
     padding: 3rem 2rem;
 }
+
 
 /* Bild: links anlegen, rund, nicht zu groß */
 .goals-image {
@@ -343,19 +345,22 @@ hr.light-100 {
     border: 1px solid #ccc;
     background: #fafafa;
     width: 100%;
-    min-height: 220px;
+    height: 220px; /* FIX statt min-height */
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .hobbies-image-img {
     width: 100%;
-    height: 100%;
-    max-height: 260px;
+    height: 100%; /* FIX: füllt die Box */
     object-fit: cover;
+    display: block;
+    border-radius: 10px;
 }
+
 
 .hobbies-gallery {
     margin-top: 0.5rem;
@@ -411,6 +416,73 @@ hr.light-100 {
     scroll-margin-top: 50px;
 }
 */
+p {
+    font-size: 1.05rem;
+}
+/* Kompetenzen */
+.skills-section {
+    background: #ffffff;
+    padding: 3rem 2rem;
+}
+
+.skills-intro {
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.skills-subtitle {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.skill-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.6rem;
+}
+
+    .skill-row span {
+        font-weight: 500;
+    }
+
+.skill-dots {
+    display: flex;
+    gap: 6px;
+}
+
+    .skill-dots::before {
+        content: '';
+    }
+
+    /* 5 Punkte */
+    .skill-dots::after {
+        content: '● ● ● ● ●';
+        letter-spacing: 2px;
+        color: #ccc;
+    }
+
+    /* Aktive Punkte einfärben */
+    .skill-dots[data-level="1"]::after {
+        color: #666;
+    }
+
+    .skill-dots[data-level="2"]::after {
+        color: #777;
+    }
+
+    .skill-dots[data-level="3"]::after {
+        color: #888;
+    }
+
+    .skill-dots[data-level="4"]::after {
+        color: #444;
+    }
+
+    .skill-dots[data-level="5"]::after {
+        color: #000;
+    }
 
 /*---Media Queries --*/
 @media (max-width: 1500px){
