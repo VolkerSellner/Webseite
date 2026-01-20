@@ -373,24 +373,25 @@ hr.light-100 {
 }
 
 .hobbies-image {
-    border: 1px solid #ccc;
-    background: #fafafa;
+    height: auto; /* fixen Wert entfernen */
+    aspect-ratio: 1 / 1; /* gleiches Verhältnis */
     width: 100%;
-    height: 220px; /* FIX statt min-height */
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     border-radius: 10px;
+    background: #fafafa;
 }
 
 .hobbies-image-img {
     width: 100%;
-    height: 100%; /* FIX: füllt die Box */
+    height: 100%;
     object-fit: cover;
     display: block;
     border-radius: 10px;
 }
+
 
 
 .hobbies-gallery {
